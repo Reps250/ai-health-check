@@ -1,0 +1,40 @@
+{
+  "points": {
+    "rank1": 1.0,
+    "rank2to3": 0.85,
+    "rankLower": 0.65,
+    "unrankedMention": 0.60,
+    "notMentioned": 0.0,
+    "negativeSentimentMultiplier": 0.5
+  },
+  "bands": {
+    "red": {
+      "max": 39,
+      "label": "Low AI Visibility",
+      "color": "#C8382E",
+      "badge": "Action Needed Urgently"
+    },
+    "amber": {
+      "min": 40,
+      "max": 69,
+      "label": "Moderate Visibility",
+      "color": "#B97A00",
+      "badge": "Losing Leads to Competitors"
+    },
+    "green": {
+      "min": 70,
+      "max": 100,
+      "label": "Strong AI Visibility",
+      "color": "#1E8E5A",
+      "badge": "Frequently Recommended"
+    }
+  },
+  "verdicts": {
+    "none": "No answers came back from the AI models.",
+    "critical": "AI models are directing virtually all local enquiries to your direct competitors.",
+    "amber": "You appear occasionally, but competitors take the top 3 recommendations in most local searches.",
+    "green": "Your business is recognized and actively recommended across multiple major AI engines."
+  },
+  "competitorDisplayLimit": 6,
+  "sourcesDisplayLimit": 8
+}

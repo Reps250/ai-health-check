@@ -1,0 +1,34 @@
+{
+  "companyName": "Saas33",
+  "productName": "Ai Health Check",
+  "domain": "aihealthcheck.com.au",
+  "tagline": "Show how AI recommends your business — and fix what's missing.",
+  "location": "Sydney, NSW, Australia",
+  "publicContactEmail": "help@saas33.com.au",
+  "teamReportRecipients": [
+    "mark@saas33.com.au",
+    "help@saas33.com.au"
+  ],
+  "colors": {
+    "blue": "#2E52CE",
+    "navy": "#1B2C6E",
+    "ink": "#222833",
+    "grey": "#5B6472",
+    "lines": "#DCE1EA",
+    "palePanel": "#F2F5FC",
+    "green": "#1E8E5A",
+    "amber": "#B97A00",
+    "red": "#C8382E",
+    "white": "#FFFFFF"
+  },
+  "fonts": {
+    "heading": "Lexend, system-ui, -apple-system, sans-serif",
+    "body": "Public Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+  },
+  "footerText": "aihealthcheck.com.au · help@saas33.com.au",
+  "legal": {
+    "businessName": "Saas33 Pty Ltd",
+    "abn": "Contact mark@saas33.com.au for ABN details",
+    "address": "Sydney NSW, Australia"
+  }
+}

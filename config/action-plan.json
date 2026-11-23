@@ -1,0 +1,88 @@
+{
+  "report": {
+    "fixesShown": "all"
+  },
+  "actions": [
+    {
+      "id": "google-business-profile",
+      "title": "Claim & 100% Complete Your Google Business Profile",
+      "why": "Google's AI Mode and Gemini extract business existence, opening hours, exact service boundaries, and review sentiment directly from Google Maps and your Google Business Profile before anything else.",
+      "steps": [
+        "Sign into business.google.com and claim or verify your physical Sydney location.",
+        "Add all primary and secondary service categories (not just one generic category).",
+        "Upload at least 15 high-res photos of your team, branded vehicles, and completed local work.",
+        "Ensure your exact operating hours, public phone number, and suburb service areas are filled in."
+      ]
+    },
+    {
+      "id": "review-velocity",
+      "title": "Surpass {topCompetitor}'s Review Count on Google",
+      "why": "AI engines strongly favor businesses with high review velocity and detailed review text. Currently, {topCompetitor} leads your local area with more frequent positive reviews.",
+      "steps": [
+        "Send an automated SMS review link to every customer within 1 hour of job completion.",
+        "Ask satisfied customers to mention the specific service and suburb in their review.",
+        "Never offer incentives, discounts or compensation for reviews (violates Google policy & Australian Consumer Law).",
+        "Reply to 100% of reviews within 48 hours, weaving in keywords naturally."
+      ]
+    },
+    {
+      "id": "citation-sources",
+      "title": "Get Listed on the Exact Sources AI Quoted",
+      "why": "When ChatGPT and Claude answered queries for your service, they cited authoritative Sydney directories and local platforms: {quotedSources}.",
+      "steps": [
+        "Claim your profile on {firstSource} and ensure your service list is fully populated.",
+        "Build active listings across {remainingSources}.",
+        "Include rich business descriptions, photos, and links back to your verified website."
+      ]
+    },
+    {
+      "id": "nap-consistency",
+      "title": "Lock In Identical Business Details (NAP) Everywhere",
+      "why": "If AI finds conflicting phone numbers or addresses across Apple Maps, Bing, Yellow Pages and your website, it loses confidence in your business and drops you from recommendations.",
+      "steps": [
+        "Standardise your Business Name, Street Address, and Phone Number (NAP) to match your legal entity.",
+        "Verify listings across Apple Business Connect, Bing Places for Business, and True Local.",
+        "Update legacy directories: Yellow Pages, Hotfrog, and your trade association registry."
+      ]
+    },
+    {
+      "id": "faq-landing-pages",
+      "title": "Answer The Exact Questions Customers Ask AI",
+      "why": "AI models failed to recommend you on {unansweredCount} key consumer prompts. Your website currently lacks clear conversational answers for those exact search intents.",
+      "steps": [
+        "Publish dedicated service landing pages targeting '[Service] in {suburb}'.",
+        "Add an interactive FAQ block addressing common customer questions and transparent pricing.",
+        "Use structured Schema.org FAQPage markup so AI crawlers parse your answers directly."
+      ]
+    },
+    {
+      "id": "technical-website-fixes",
+      "title": "Fix The {issueCount} Critical Website & Crawler Issues Found",
+      "why": "AI search bots (GPTBot, ClaudeBot, Google-Extended) need fast, mobile-friendly, schema-rich web pages to index your business facts accurately.",
+      "steps": [
+        "Resolve the urgent items identified in our automated website audit.",
+        "Ensure your robots.txt allows AI crawlers and provides an accessible llms.txt.",
+        "Add tap-to-call Australian phone formatting on all mobile views."
+      ]
+    },
+    {
+      "id": "local-authority-mentions",
+      "title": "Earn High-Trust Local Mentions Across Sydney",
+      "why": "AI engines assess domain authority through local ecosystem links, including Sydney trade associations, community sponsorships, and supplier partner directories.",
+      "steps": [
+        "Get listed on your suppliers' 'Where to Buy / Authorised Installer' pages.",
+        "Sponsor a local Sydney sports team or community event with a website link.",
+        "Join your local chamber of commerce or Master Builders / Master Plumbers association."
+      ]
+    },
+    {
+      "id": "monthly-recheck",
+      "title": "Track & Monitor Your AI Visibility Every Month",
+      "why": "AI recommendation algorithms and competitor activities change weekly. Ongoing tracking ensures you catch competitor ranking shifts before you lose phone calls.",
+      "steps": [
+        "Run an AI Health Check on the 1st of every month to measure visibility score changes.",
+        "Compare top AI competitor shifts and adjust your directory presence accordingly."
+      ]
+    }
+  ]
+}

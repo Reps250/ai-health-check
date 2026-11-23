@@ -1,0 +1,21 @@
+{
+  "publicChecks": {
+    "maxPerIpPerDay": 5,
+    "globalDailyCap": 100,
+    "enginesCount": 2,
+    "questionsCount": 1
+  },
+  "repScanner": {
+    "maxSendsPerHourPerRep": 15,
+    "quickCheckQuestions": 4,
+    "fullCheckQuestions": 10
+  },
+  "cache": {
+    "enabled": true,
+    "ttlHours": 24
+  },
+  "budgetCaps": {
+    "dailySpendCapAud": 25.00,
+    "alertEmail": "mark@saas33.com.au"
+  }
+}

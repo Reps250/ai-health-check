@@ -1,0 +1,63 @@
+{
+  "sourceDoc": "Pricing – Saas33 – 21.11.2026",
+  "sourceDocId": "1graklJHoAJywE3ES95qv9yJOSqrdQSBRPEshYQK9mG8",
+  "currency": "AUD",
+  "taxInclusive": true,
+  "taxLabel": "inc. GST",
+  "plans": [
+    {
+      "id": "ai-visibility",
+      "name": "AI Visibility & Health Tracking",
+      "priceAud": 99,
+      "billingCycle": "month",
+      "setupFeeAud": 0,
+      "badge": "Most Popular",
+      "headline": "Be the business AI recommends first.",
+      "features": [
+        "Continuous weekly AI re-checks & ranking tracking",
+        "Weekly plain-English report sent to your inbox",
+        "Sydney local citation & knowledge graph optimisation",
+        "Competitor theft alerts when rivals outrank you",
+        "Dedicated Sydney account manager"
+      ],
+      "stripePaymentLink": "https://buy.stripe.com/test_eVaeVf2hY33aiHealthCheck99",
+      "popular": true
+    },
+    {
+      "id": "ai-receptionist",
+      "name": "AI Receptionist (24/7 Phone Answering)",
+      "priceAud": 399,
+      "billingCycle": "month",
+      "setupFeeAud": 199,
+      "badge": "Turnkey Setup",
+      "headline": "Never miss another after-hours job call.",
+      "features": [
+        "Answers 24/7 in natural Australian voice",
+        "Books jobs straight into your calendar or job app",
+        "Instantly SMS alerts you with caller details",
+        "Passes emergency calls straight to your mobile",
+        "Syncs with ServiceM8, Tradify, Cliniko or Google"
+      ],
+      "stripePaymentLink": "https://buy.stripe.com/test_eVaeVf2hY33aiReceptionist399",
+      "popular": false
+    },
+    {
+      "id": "full-bundle",
+      "name": "Total Local AI Domination Bundle",
+      "priceAud": 449,
+      "billingCycle": "month",
+      "setupFeeAud": 0,
+      "badge": "Best Value (Save A$49/mo)",
+      "headline": "Complete visibility + 24/7 call capture.",
+      "features": [
+        "Everything in AI Visibility (A$99 value)",
+        "Everything in AI Receptionist (A$399 value)",
+        "Free priority on-site setup in Sydney",
+        "Monthly executive strategy call with Mark Dixon",
+        "Zero setup fees"
+      ],
+      "stripePaymentLink": "https://buy.stripe.com/test_eVaeVf2hY33aiBundle449",
+      "popular": false
+    }
+  ]
+}

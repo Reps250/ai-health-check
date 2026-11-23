@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Usage & Costs | Ai Health Check (Saas33)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header-bar">
+    <div class="brand-wrap">
+      <div class="logo-badge">Saas33</div>
+      <div class="brand-title">
+        <span class="brand-name">Ai Health Check</span>
+        <span class="brand-sub">Admin Cost Control & Usage Dashboard</span>
+      </div>
+    </div>
+    <div class="nav-tools">
+      <a href="scan.html" class="btn btn-secondary btn-sm">Scanner Tool</a>
+      <a href="index.html" class="btn btn-secondary btn-sm">Public Site</a>
+    </div>
+  </header>
+
+  <main class="container" style="padding:30px 20px;">
+    <div class="card-header" style="margin-bottom:24px;">
+      <div>
+        <h2>AI Token Spend & Cost Tracking (A$)</h2>
+        <p>Live tracking of API calls, model queries, and 24-hour cache savings for Sydney operations.</p>
+      </div>
+      <span class="rep-pill" style="background:#E8F7F0; color:#1E8E5A; border-color:#1E8E5A;">
+        Daily Spend Cap: A$25.00
+      </span>
+    </div>
+
+    <!-- Stat KPI Tiles -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:28px;">
+      <div class="card" style="margin:0; text-align:center;">
+        <div style="font-size:0.8rem; text-transform:uppercase; font-weight:700; color:var(--color-grey);">Month-to-Date Spend</div>
+        <div style="font-family:var(--font-heading); font-size:2.4rem; font-weight:800; color:var(--color-navy); margin:8px 0;">
+          A$14.82
+        </div>
+        <span style="font-size:0.75rem; color:var(--color-green); font-weight:600;">Well under monthly budget</span>
+      </div>
+
+      <div class="card" style="margin:0; text-align:center;">
+        <div style="font-size:0.8rem; text-transform:uppercase; font-weight:700; color:var(--color-grey);">Avg Cost / Quick Check</div>
+        <div style="font-family:var(--font-heading); font-size:2.4rem; font-weight:800; color:var(--color-blue); margin:8px 0;">
+          A$0.14
+        </div>
+        <span style="font-size:0.75rem; color:var(--color-grey);">4 queries across 4 engines</span>
+      </div>
+
+      <div class="card" style="margin:0; text-align:center;">
+        <div style="font-size:0.8rem; text-transform:uppercase; font-weight:700; color:var(--color-grey);">Avg Cost / Full Check</div>
+        <div style="font-family:var(--font-heading); font-size:2.4rem; font-weight:800; color:var(--color-navy); margin:8px 0;">
+          A$1.18
+        </div>
+        <span style="font-size:0.75rem; color:var(--color-grey);">10 search-grounded calls</span>
+      </div>
+
+      <div class="card" style="margin:0; text-align:center;">
+        <div style="font-size:0.8rem; text-transform:uppercase; font-weight:700; color:var(--color-grey);">24h Cache Hit Rate</div>
+        <div style="font-family:var(--font-heading); font-size:2.4rem; font-weight:800; color:var(--color-green); margin:8px 0;">
+          38.4%
+        </div>
+        <span style="font-size:0.75rem; color:var(--color-green); font-weight:600;">Saved A$9.20 this week</span>
+      </div>
+    </div>
+
+    <!-- Checks & Rep Activity Table -->
+    <div class="card">
+      <h3 style="margin-bottom:14px; color:var(--color-navy);">Recent Scan Logs & Cost Breakdown</h3>
+      <table class="live-grid-table">
+        <thead>
+          <tr>
+            <th>Date & Time (Sydney)</th>
+            <th>Business & Suburb</th>
+            <th>Type</th>
+            <th>Rep / Source</th>
+            <th>Engines Used</th>
+            <th>Cached Qs</th>
+            <th>Cost (A$)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>24/11/2026 10:14</td>
+            <td><strong>Bondi Plumbing Experts</strong> (Bondi)</td>
+            <td>Full Check</td>
+            <td>Mark Dixon</td>
+            <td>ChatGPT, Gemini, Claude, Google AI</td>
+            <td>2 / 10</td>
+            <td><strong style="color:var(--color-navy);">A$0.94</strong></td>
+          </tr>
+          <tr>
+            <td>24/11/2026 09:30</td>
+            <td><strong>Surry Hills Dental Studio</strong> (Surry Hills)</td>
+            <td>Quick Check</td>
+            <td>Mark Dixon</td>
+            <td>ChatGPT, Gemini, Claude, Google AI</td>
+            <td>1 / 4</td>
+            <td><strong style="color:var(--color-navy);">A$0.11</strong></td>
+          </tr>
+          <tr>
+            <td>23/11/2026 16:45</td>
+            <td><strong>Parramatta Sparky Pros</strong> (Parramatta)</td>
+            <td>Brand Check</td>
+            <td>Mark Dixon</td>
+            <td>ChatGPT, Gemini, Claude, Google AI</td>
+            <td>0 / 5</td>
+            <td><strong style="color:var(--color-navy);">A$0.48</strong></td>
+          </tr>
+          <tr>
+            <td>23/11/2026 14:12</td>
+            <td><strong>Dixon Legal Sydney</strong> (Sydney CBD)</td>
+            <td>Public Free</td>
+            <td>Website Visitor</td>
+            <td>ChatGPT, Gemini</td>
+            <td>0 / 2</td>
+            <td><strong style="color:var(--color-navy);">A$0.06</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Cost Control Rules -->
+    <div class="card" style="background:#F2F5FC; border-color:#DCE1EA;">
+      <h4 style="color:var(--color-navy); margin-bottom:8px;">Cost Control Architecture Summary (Section 10)</h4>
+      <ul style="margin-left:20px; font-size:0.875rem; color:var(--color-grey);">
+        <li><strong>Smallest Models First:</strong> Lightweight search-grounded models (gpt-4o-mini, gemini-1.5-flash, claude-3-5-haiku) keep answers under 4¢ each.</li>
+        <li><strong>24-Hour Cache:</strong> Repeats and demos for the same website host within 24 hours pull directly from Postgres cache with 0 API cost.</li>
+        <li><strong>Rep Send Limits:</strong> Max 15 report emails per rep per hour prevents accidental automated mail loops.</li>
+        <li><strong>Public Daily Hard Cap:</strong> 100 free checks / A$25 daily ceiling sends an automated notification email to mark@saas33.com.au if triggered.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>aihealthcheck.com.au · Confidential Admin Tool · Saas33 Sydney</div>
+  </footer>
+</body>
+</html>

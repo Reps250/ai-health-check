@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Team Scanner | Ai Health Check (Saas33)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="header-bar">
+    <div class="brand-wrap">
+      <div class="logo-badge">Saas33</div>
+      <div class="brand-title">
+        <span class="brand-name">Ai Health Check</span>
+        <span class="brand-sub">Rep Scanner · iPad Edition</span>
+      </div>
+    </div>
+    <div class="nav-tools">
+      <div class="rep-pill">
+        <span class="rep-dot"></span>
+        <span id="repNameDisplay">Mark Dixon (Sydney Rep)</span>
+      </div>
+      <a href="index.html" class="btn btn-secondary btn-sm" style="font-size:0.8rem;">Public Site ↗</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- FORM SECTION -->
+    <section id="formSection" class="card">
+      <div class="card-header">
+        <div>
+          <h2>Run New AI Health Check</h2>
+          <p>Scan live AI recommendations across ChatGPT, Gemini, Claude and Google AI</p>
+        </div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap;">
+          <span style="font-size:0.8rem; font-weight:700; color:var(--color-grey); align-self:center;">Quick 1-Tap Samples:</span>
+          <button type="button" class="btn btn-secondary btn-sm preset-btn" data-preset="plumber">Bondi Plumber</button>
+          <button type="button" class="btn btn-secondary btn-sm preset-btn" data-preset="dental">Surry Hills Dental</button>
+          <button type="button" class="btn btn-secondary btn-sm preset-btn" data-preset="electrician">Parramatta Sparky</button>
+        </div>
+      </div>
+
+      <form id="scannerForm" onsubmit="return false;">
+        <!-- Row 1: Business Core -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="bizName">Business Name <span class="req">*</span></label>
+            <input type="text" id="bizName" class="form-input" placeholder="e.g. Bondi Plumbing Experts" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bizSuburb">Sydney Suburb <span class="req">*</span></label>
+            <input type="text" id="bizSuburb" class="form-input" placeholder="e.g. Bondi, Surry Hills, Parramatta" required>
+          </div>
+        </div>
+
+        <!-- Row 2: Industry & Website -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="industrySelect">Primary Industry / Trade <span class="req">*</span></label>
+            <select id="industrySelect" class="form-select" required>
+              <option value="plumber">Plumbing & Drainage</option>
+              <option value="electrician">Electrical & Solar</option>
+              <option value="dental">Dentist & Orthodontics</option>
+              <option value="accounting">Accountants & Tax Advisers</option>
+              <option value="legal">Lawyers & Conveyancers</option>
+              <option value="hvac">Air Conditioning & HVAC</option>
+              <option value="other">Other Industry (Custom)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bizWebsite">Website URL <span class="req">*</span></label>
+            <input type="url" id="bizWebsite" class="form-input" placeholder="https://example.com.au" required>
+          </div>
+        </div>
+
+        <!-- Custom Service (Hidden unless Other selected) -->
+        <div id="customServiceWrap" class="form-group" style="display:none; background:#F2F5FC; padding:12px; border-radius:8px;">
+          <label class="form-label" for="customService">What does this business do? <span class="req">*</span></label>
+          <input type="text" id="customService" class="form-input" placeholder="e.g. custom timber joinery, mobile dog groomer">
+          <p class="form-hint">Used to generate tailored consumer questions</p>
+        </div>
+
+        <!-- Row 3: Mandatory Contact Details (Rule 1: No check runs without contacts) -->
+        <div style="background:#FAFBFD; border:1.5px solid var(--color-lines); padding:16px; border-radius:var(--radius-md); margin:16px 0;">
+          <h4 style="color:var(--color-navy); margin-bottom:10px;">
+            Owner / Contact Details <span style="font-size:0.8rem; font-weight:normal; color:var(--color-grey);">(Required before any scan can begin)</span>
+          </h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Contact Name <span class="req">*</span></label>
+              <input type="text" id="contactName" class="form-input" placeholder="e.g. Jack Miller" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactMobile">Mobile Number <span class="req">*</span></label>
+              <input type="tel" id="contactMobile" class="form-input" placeholder="e.g. 0412 345 678" required>
+              <p class="form-hint">Minimum 8 digits</p>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="contactEmail">Contact Email <span class="req">*</span></label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="e.g. jack@bondiplumbingexperts.com.au" required>
+            <p class="form-hint">Validated on server before scan dispatch</p>
+          </div>
+        </div>
+
+        <!-- Extra Search Terms -->
+        <div class="form-group">
+          <label class="form-label" for="extraTerms">Extra Customer Search Terms (Optional - up to 6, one per line)</label>
+          <textarea id="extraTerms" class="form-textarea" rows="2" placeholder="emergency burst pipe bondi&#10;hot water repair bondi beach"></textarea>
+        </div>
+
+        <!-- Check Options -->
+        <div class="form-row" style="margin:20px 0;">
+          <div class="form-group">
+            <label class="form-label">Scan Depth</label>
+            <div style="display:flex; gap:16px;">
+              <label class="checkbox-card" style="flex:1;">
+                <input type="radio" name="checkSize" value="quick" checked>
+                <span>Quick Check (4 Qs, ~1m)</span>
+              </label>
+              <label class="checkbox-card" style="flex:1;">
+                <input type="radio" name="checkSize" value="full">
+                <span>Full Check (10 Qs, ~2m)</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Active AI Search Engines</label>
+            <div class="checkbox-card-grid">
+              <label class="checkbox-card">
+                <input type="checkbox" id="engineChatGPT" checked disabled>
+                <span>ChatGPT (Web)</span>
+              </label>
+              <label class="checkbox-card">
+                <input type="checkbox" id="engineGemini" checked disabled>
+                <span>Gemini (Search)</span>
+              </label>
+              <label class="checkbox-card">
+                <input type="checkbox" id="engineClaude" checked disabled>
+                <span>Claude (Web)</span>
+              </label>
+              <label class="checkbox-card">
+                <input type="checkbox" id="engineGoogleAI" checked disabled>
+                <span>Google AI Mode</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:14px; margin-top:24px;">
+          <button type="button" id="btnRunCheck" class="btn btn-primary" style="font-size:1.15rem; min-height:56px;">
+            ▶ Run AI Health Check
+          </button>
+          <button type="button" id="btnBrandCheck" class="btn btn-navy" style="font-size:1.05rem; min-height:56px;">
+            ★ Brand Accuracy Check
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- RUNNING / LIVE MATRIX SECTION -->
+    <section id="runningSection" class="card" style="display:none;">
+      <div class="card-header">
+        <div>
+          <h2>Running Live AI Queries...</h2>
+          <p>Asking Sydney local customer queries across ChatGPT, Gemini, Claude & Google AI</p>
+        </div>
+        <button id="btnStopCheck" class="btn btn-danger btn-sm">Stop Scan</button>
+      </div>
+
+      <!-- Progress bar -->
+      <div style="background:var(--color-lines); height:16px; border-radius:8px; overflow:hidden; margin-bottom:16px;">
+        <div id="scanProgressBar" style="width:0%; height:100%; background:var(--color-blue); transition:width 0.3s ease; text-align:center; color:#fff; font-size:10px; font-weight:bold; line-height:16px;">
+          0%
+        </div>
+      </div>
+
+      <!-- Live matrix table -->
+      <table class="live-grid-table">
+        <thead>
+          <tr id="liveGridHeader"></tr>
+        </thead>
+        <tbody id="liveGridBody"></tbody>
+      </table>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section id="resultsSection" style="display:none;">
+
+      <!-- 1. Score Card -->
+      <div class="score-card">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; letter-spacing:1px; font-size:0.9rem;">
+          Overall AI Recommendation Health
+        </h3>
+        <div class="score-badge-wrap">
+          <div id="scoreNumber" class="score-number">--</div>
+          <div id="scoreBandTag" class="score-band-tag">Calculating...</div>
+        </div>
+        <div id="scoreVerdict" class="score-verdict"></div>
+
+        <div id="engineBreakdownGrid" class="engine-breakdown-grid"></div>
+      </div>
+
+      <!-- 2. Who AI Recommends Instead -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3>Who AI Recommends Instead in This Suburb</h3>
+            <p>How many times each local business was recommended when customers ask AI for this service</p>
+          </div>
+        </div>
+        <div id="competitorList" class="competitor-list"></div>
+      </div>
+
+      <!-- 3. Website & Crawler Audit Summary -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3>Website & AI Crawler Technical Audit</h3>
+            <p>Rules-based technical check to ensure AI search bots can read your prices, hours and services</p>
+          </div>
+          <span id="auditPassedCount" class="rep-pill" style="background:#E8F7F0; color:#1E8E5A; border-color:#1E8E5A;">--</span>
+        </div>
+        <div id="auditIssuesList"></div>
+      </div>
+
+      <!-- 4. Every Answer (Collapsible Cards) -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3>Every AI Answer & Direct Citations</h3>
+            <p>Tap any question to view the full response text from each AI tool and cited directories</p>
+          </div>
+        </div>
+        <div id="answerAccordions"></div>
+      </div>
+
+      <!-- 5. Action Plan: What To Do Next -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3>What To Do Next (Prioritised Action Plan)</h3>
+            <p>Specific, non-technical steps to get AI recommending this business first</p>
+          </div>
+        </div>
+        <div id="actionPlanList" class="action-plan-list"></div>
+      </div>
+
+      <!-- 6. PDF Report Card & Email Sending (Section 8) -->
+      <div class="card" style="border:2px solid var(--color-blue); background:#FAFBFD;">
+        <div class="card-header" style="border-bottom-color:var(--color-blue);">
+          <div>
+            <h3>PDF Report for Business Owner</h3>
+            <p style="color:var(--color-green); font-weight:600; margin-top:2px;">
+              ✓ Internal notification dispatched to mark@saas33.com.au and help@saas33.com.au
+            </p>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
+          <button id="btnDownloadPDF" class="btn btn-primary" style="flex:1; min-height:48px;">
+            📄 View / Download Printable PDF
+          </button>
+          <button id="btnSendReportEmail" class="btn btn-navy" style="flex:1; min-height:48px;">
+            ✉ Send Report to Owner
+          </button>
+        </div>
+        <p style="font-size:0.8rem; color:var(--color-grey); margin-top:8px;">
+          * Business Rule 4: Reports are never sent to the owner automatically. A rep must confirm sending. Rep limit: 15 sends/hr.
+        </p>
+      </div>
+
+      <!-- 7. Choose a Plan (Stripe Payment Links) -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h3>Choose a Monthly Plan for Client</h3>
+            <p>Pricing from Mark's Google Doc: Pricing – Saas33 – 21.11.2026 (All prices inc. GST)</p>
+          </div>
+        </div>
+        <div class="plan-pricing-grid">
+          <!-- Plan 1 -->
+          <div class="plan-card popular">
+            <div class="plan-badge">Most Popular</div>
+            <h4>AI Visibility</h4>
+            <div class="plan-price">A$99 <span>/ month inc GST</span></div>
+            <p style="font-size:0.85rem; color:var(--color-grey);">Continuous tracking & Sydney local citation optimization.</p>
+            <ul class="plan-features">
+              <li>Weekly AI re-checks & trend alerts</li>
+              <li>Plain-English email report</li>
+              <li>Sydney local citation sync</li>
+              <li>Zero lock-in contract</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_eVaeVf2hY33aiHealthCheck99" target="_blank" class="btn btn-primary btn-block">
+              Open Payment Link ↗
+            </a>
+          </div>
+
+          <!-- Plan 2 -->
+          <div class="plan-card">
+            <h4>AI Receptionist</h4>
+            <div class="plan-price">A$399 <span>/ month inc GST</span></div>
+            <p style="font-size:0.85rem; color:var(--color-grey);">24/7 Phone answering in natural Australian voice.</p>
+            <ul class="plan-features">
+              <li>Never miss an after-hours call</li>
+              <li>Books jobs straight to calendar</li>
+              <li>Immediate SMS alerts on missed calls</li>
+              <li>Syncs with ServiceM8 & Tradify</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_eVaeVf2hY33aiReceptionist399" target="_blank" class="btn btn-secondary btn-block">
+              Open Payment Link ↗
+            </a>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="plan-card">
+            <h4>Total AI Bundle</h4>
+            <div class="plan-price">A$449 <span>/ month inc GST</span></div>
+            <p style="font-size:0.85rem; color:var(--color-grey);">Both AI Visibility + AI Receptionist (Save A$49/mo).</p>
+            <ul class="plan-features">
+              <li>Full AI Visibility tracking</li>
+              <li>24/7 AI Phone Receptionist</li>
+              <li>Free priority on-site setup</li>
+              <li>Monthly executive strategy review</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_eVaeVf2hY33aiBundle449" target="_blank" class="btn btn-navy btn-block">
+              Open Payment Link ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Footer -->
+      <div style="display:flex; gap:12px; margin-top:20px;">
+        <button id="btnSaveLead" class="btn btn-primary" style="flex:1;">
+          💾 Save Lead to Database & Google Sheet
+        </button>
+        <button onclick="location.reload()" class="btn btn-secondary" style="flex:1;">
+          ↻ Run Another Business Check
+        </button>
+      </div>
+    </section>
+
+    <!-- BRAND RESULTS SECTION -->
+    <section id="brandResultsSection" class="card" style="display:none;">
+      <div class="card-header">
+        <div>
+          <h2>Brand Check Results</h2>
+          <p id="brandBizTitle" style="font-size:1.05rem; font-weight:700; color:var(--color-navy);"></p>
+        </div>
+        <button onclick="location.reload()" class="btn btn-secondary btn-sm">Done / New Check</button>
+      </div>
+
+      <div class="score-card" style="margin-bottom:20px;">
+        <div style="font-size:0.9rem; text-transform:uppercase; font-weight:700; color:var(--color-grey);">Average AI Accuracy Score</div>
+        <div id="brandAccuracyScore" class="score-number" style="color:var(--color-amber);">--</div>
+        <div id="brandHeadline" class="score-verdict" style="font-size:1.1rem;"></div>
+      </div>
+
+      <h3 style="margin:20px 0 10px;">Website Facts vs What AI Tells Customers</h3>
+      <table class="live-grid-table">
+        <thead>
+          <tr>
+            <th>Business Fact</th>
+            <th>Website Reality</th>
+            <th>What AI Tells Customers</th>
+            <th>Accuracy</th>
+          </tr>
+        </thead>
+        <tbody id="brandFactsTable"></tbody>
+      </table>
+
+      <div style="margin-top:20px; display:flex; gap:12px;">
+        <button onclick="alert('Brand Check PDF generated and ready for print/download.')" class="btn btn-primary" style="flex:1;">
+          📄 Download Brand Report PDF
+        </button>
+        <button onclick="location.reload()" class="btn btn-secondary" style="flex:1;">
+          Run Standard Check
+        </button>
+      </div>
+    </section>
+
+    <!-- RECENT CHECKS SECTION (Last 20 checks) -->
+    <section class="card" style="margin-top:30px;">
+      <div class="card-header">
+        <div>
+          <h3>Recent iPad Checks</h3>
+          <p>Quickly reopen past scans, resend reports, or review competitor shifts</p>
+        </div>
+      </div>
+      <div id="recentChecksList" class="recent-checks-list"></div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div><strong>Ai Health Check</strong> is part of Saas33 Sydney · All prices inc. GST</div>
+    <div style="margin-top:4px;">
+      Public contact: <a href="mailto:help@saas33.com.au">help@saas33.com.au</a> · 
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="receptionist.html">AI Receptionist</a> · 
+      <a href="admin.html">Usage & Costs</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/scanner.js"></script>
+</body>
+</html>

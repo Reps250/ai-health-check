@@ -1,0 +1,18 @@
+# Ai Health Check (Saas33)
+> Sydney's leading AI visibility tracking and advisory service for local small businesses.
+
+## Company Details
+- Business: Saas33 Pty Ltd
+- Service: Ai Health Check (aihealthcheck.com.au)
+- Offering: "Get Found on AI" & AI Visibility Tracking
+- Location: Sydney, New South Wales, Australia
+- Official Email: help@saas33.com.au
+- Pricing: From A$99/month inc. GST (AI Visibility), A$399/month inc. GST (AI Receptionist)
+
+## Core Capabilities
+- Team scanner iPad-first field tool for in-person business audits
+- Multi-engine search tracking across ChatGPT (web), Google Gemini, Claude, and Google AI Mode
+- Live competitor recommendation analysis
+- 18-point rules-based website crawler and schema audit
+- Plain-English action plan and PDF generation
+- 24/7 AI Receptionist and call answering integration

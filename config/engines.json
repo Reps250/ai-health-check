@@ -1,0 +1,44 @@
+{
+  "engines": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "model": "gpt-4o-mini",
+      "searchEnabled": true,
+      "enabled": true,
+      "temperature": 0.3,
+      "timeoutSeconds": 75,
+      "costPerQueryAud": 0.04
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "model": "gemini-1.5-flash",
+      "searchEnabled": true,
+      "enabled": true,
+      "temperature": 0.3,
+      "timeoutSeconds": 75,
+      "costPerQueryAud": 0.02
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "model": "claude-3-5-haiku-20241022",
+      "searchEnabled": true,
+      "enabled": true,
+      "temperature": 0.3,
+      "timeoutSeconds": 75,
+      "costPerQueryAud": 0.05
+    },
+    {
+      "id": "google-ai",
+      "name": "Google AI Mode",
+      "model": "gemini-search-grounded",
+      "searchEnabled": true,
+      "enabled": true,
+      "temperature": 0.2,
+      "timeoutSeconds": 75,
+      "costPerQueryAud": 0.03
+    }
+  ]
+}

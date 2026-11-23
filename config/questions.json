@@ -1,0 +1,132 @@
+{
+  "quickCount": 4,
+  "fullCount": 10,
+  "industries": [
+    {
+      "id": "plumber",
+      "name": "Plumbing & Drainage",
+      "defaultService": "emergency plumber",
+      "templates": [
+        "Who is the best {service} in {suburb} Sydney?",
+        "Top rated emergency plumber near {suburb} with 24/7 service",
+        "Recommended blocked drain specialist in {suburb}",
+        "Who would you call for hot water system repairs in {suburb}?",
+        "Compare top 3 commercial plumbing companies serving {suburb}",
+        "Reliable gas fitter and leak detector around {suburb}",
+        "What local plumbing business has the best customer reviews in {suburb}?",
+        "Affordable licensed plumbers offering upfront quotes in {suburb}",
+        "Local council-approved backflow testing plumber in {suburb} area",
+        "Best plumbing contractor for bathroom renovations in {suburb}"
+      ]
+    },
+    {
+      "id": "electrician",
+      "name": "Electrical & Solar",
+      "defaultService": "licensed electrician",
+      "templates": [
+        "Who is the best licensed electrician in {suburb}?",
+        "Emergency 24/7 electrician near {suburb} for power outages",
+        "Top rated solar panel installation and repair company in {suburb}",
+        "Who can install EV car chargers and switchboard upgrades in {suburb}?",
+        "Commercial electrical contractors recommended in {suburb} Sydney",
+        "Best domestic electrician for LED lighting and rewiring in {suburb}",
+        "Which electrician has the highest ratings in {suburb}?",
+        "Local level 2 electrician servicing {suburb} and surrounds",
+        "Affordable smoke alarm compliance electricians in {suburb}",
+        "Fast response electrical repair service near {suburb}"
+      ]
+    },
+    {
+      "id": "dental",
+      "name": "Dentist & Orthodontics",
+      "defaultService": "family dentist",
+      "templates": [
+        "Who is the top-rated dentist in {suburb}?",
+        "Gentle emergency dentist near {suburb} open today",
+        "Best clinic for teeth whitening and veneers in {suburb}",
+        "Recommended family dental practice taking new patients in {suburb}",
+        "Clear aligner and Invisalign specialists in {suburb} Sydney",
+        "Which dental clinic has the best patient reviews in {suburb}?",
+        "Wisdom teeth removal and oral surgeon near {suburb}",
+        "Affordable dental checkup and clean in {suburb}",
+        "Children's paediatric dentist clinic serving {suburb}",
+        "Top cosmetic dental surgeons in {suburb} area"
+      ]
+    },
+    {
+      "id": "accounting",
+      "name": "Accountants & Tax Advisers",
+      "defaultService": "small business accountant",
+      "templates": [
+        "Best small business accountant and tax agent in {suburb}",
+        "Recommended CPA firm for company tax returns in {suburb}",
+        "Xero certified bookkeeper and payroll specialist in {suburb}",
+        "Top rated financial planner and tax strategist near {suburb}",
+        "Who handles trust accounting and SMSF audits in {suburb}?",
+        "Most reliable accountant for tradies and subcontractors in {suburb}",
+        "Which accounting firm has the best client ratings in {suburb}?",
+        "Startup advisory and business structure accountant in {suburb}",
+        "Affordable BAS preparation agent near {suburb}",
+        "Corporate tax advisory firm in {suburb} Sydney"
+      ]
+    },
+    {
+      "id": "legal",
+      "name": "Lawyers & Conveyancers",
+      "defaultService": "property conveyancer",
+      "templates": [
+        "Best property conveyancer and solicitor in {suburb}",
+        "Recommended commercial lawyer for business leases in {suburb}",
+        "Family law and estate planning solicitor near {suburb}",
+        "Top rated wills and probate law firm in {suburb}",
+        "Which conveyancer provides fixed-fee contract reviews in {suburb}?",
+        "Best dispute resolution and litigation lawyers around {suburb}",
+        "Highly recommended boutique law firm in {suburb} Sydney",
+        "Fast settlement conveyancing specialist in {suburb}",
+        "Trusted employment lawyer for small employers in {suburb}",
+        "Local legal practice with 5-star Google reviews in {suburb}"
+      ]
+    },
+    {
+      "id": "hvac",
+      "name": "Air Conditioning & HVAC",
+      "defaultService": "air conditioning specialist",
+      "templates": [
+        "Best air conditioning installation and service in {suburb}",
+        "Emergency ducted AC repair company near {suburb}",
+        "Top split-system air conditioning supply and install in {suburb}",
+        "Which HVAC company has the best warranty and reviews in {suburb}?",
+        "Commercial air conditioning maintenance contractors in {suburb}",
+        "Licensed Daikin and Mitsubishi AC dealers in {suburb}",
+        "Affordable air con re-gassing and diagnostics in {suburb}",
+        "Same day heating and cooling repairs around {suburb}",
+        "Energy-efficient ducted reverse cycle systems in {suburb}",
+        "Local air conditioning technician recommended by residents in {suburb}"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other Industry / Custom Trade",
+      "defaultService": "local specialist",
+      "templates": [
+        "Who is the best {service} in {suburb}?",
+        "Top rated {service} near {suburb} with outstanding reviews",
+        "Recommended provider for {service} serving {suburb} Sydney",
+        "Who would locals recommend for {service} in {suburb}?",
+        "Compare top 3 companies providing {service} around {suburb}",
+        "Which business is most reliable for {service} in {suburb}?",
+        "Affordable and trusted {service} in {suburb} area",
+        "Who offers fast turnaround {service} near {suburb}?",
+        "Best customer service for {service} in {suburb}",
+        "Highest rated specialist for {service} servicing {suburb}"
+      ]
+    }
+  ],
+  "brandQuestions": [
+    "Tell me about {business} in {suburb} Sydney.",
+    "What services does {business} in {suburb} provide and what are their specialties?",
+    "What is the contact phone number, address and website for {business} in {suburb}?",
+    "What are the opening hours and emergency contact options for {business} in {suburb}?",
+    "What do customers say about their experience with {business} in {suburb}?"
+  ]
+}
